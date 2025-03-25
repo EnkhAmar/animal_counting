@@ -10,11 +10,9 @@ train_results = model.train(
     epochs=100,
     time=None,
     patience=100,
-    imgsz=640,
+    imgsz=800,
     device="cuda" if torch.cuda.is_available() else "cpu",
-    batch=16,
-    iou=0.6,
-    conf=0.001,
+    batch=3,
 )
 
 model.export(format="torchscript")
